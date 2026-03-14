@@ -1,37 +1,53 @@
-# Mapa de infraestructura del sistema real del cliente (BRY Andina)
+# Mapa de infraestructura del sistema real del cliente (Bray Controls Andina)
 
-> **Nota:** Este mapa está construido con base en la transcripción del cliente. Representa la **infraestructura lógica real del proceso operativo**: sistemas, actores, flujos de información e integraciones principales.  
-> No incluye detalles de red física, marcas de servidores, IPs, puertos o nube específica porque esa información no aparece explícitamente en la entrevista.
+> **Nota:** Este mapa está construido con base en la información obtenida durante la entrevista con el cliente. Representa la **infraestructura lógica del proceso operativo**, incluyendo actores, sistemas empresariales, flujos de información e integraciones principales.  
+> No incluye detalles de infraestructura física como redes, servidores, direcciones IP, puertos o proveedores de nube, ya que dicha información no fue proporcionada durante el levantamiento de información.
 
----
+# 1. Vista general de la arquitectura
 
-## 1. Vista general
+El siguiente diagrama representa el flujo principal de información y los sistemas involucrados en la operación comercial y logística de **Bray Controls Andina**.
 
 ```mermaid
 flowchart TD
-    A[Clientes / Mercado] --> B[Equipo Comercial]
-    B --> C[Dynamics 365 / Cotización]
+
+    A[Clientes / Mercado Industrial] --> B[Equipo Comercial]
+    
+    B --> C[Dynamics 365<br/>Gestión de Cotizaciones]
+    
     C --> D[Orden de Compra del Cliente]
-    D --> E[Sales Order - SO]
-    E --> F[ERP LN]
+    
+    D --> E[Ingreso manual de pedido]
+    
+    E --> F[ERP LN<br/>Sistema central de gestión]
 
-    F --> G[Operaciones]
-    G --> H[Bodegas Regionales<br/>Bogotá / Cali / Barranquilla]
-    G --> I[Compras / Purchase Orders - PO]
-    I --> J[Proveedores / Subsidiarias Bray]
-    J --> K[Importación / Aduana / Nacionalización]
-    K --> H
+    F --> G[Área de Operaciones]
 
-    H --> L[Inventario]
-    L --> M[Despacho / Shipping]
-    M --> N[Cliente Final]
+    G --> H[Bodegas regionales<br/>Bogotá / Cali / Barranquilla]
 
-    F --> O[Order Track]
-    O --> G
+    G --> I[Gestión de Compras]
+    
+    I --> J[Purchase Orders - PO]
 
-    F --> P[Financiera]
-    P --> Q[Facturación / Cobro]
+    J --> K[Proveedores y Subsidiarias Bray]
 
-    F --> R[Power BI / Reportes]
-    F --> S[Excel / Seguimiento manual]
-```
+    K --> L[Importación / Aduanas / Nacionalización]
+
+    L --> H
+
+    H --> M[Inventario]
+
+    M --> N[Despacho / Shipping]
+
+    N --> O[Cliente final]
+
+    F --> P[Order Track<br/>Seguimiento operativo de órdenes]
+
+    P --> G
+
+    F --> Q[Área Financiera]
+
+    Q --> R[Facturación y Cobro]
+
+    F --> S[Power BI<br/>Reportes y analítica]
+
+    F --> T[Excel<br/>Seguimiento manual y control operativo]
