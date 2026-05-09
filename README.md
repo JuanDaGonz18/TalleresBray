@@ -24,38 +24,31 @@ El análisis cubre las cuatro capas del modelo de arquitectura empresarial:
 ##  Estructura del Repositorio
 
 ```
-📁 bray-controls-andina-ae/
+📁 /
 │
-├── 📄 README.md                        ← Este archivo
+├── 📄 README.md                              
 │
-├── 📁 01_contexto/
-│   ├── contexto_organizacional.md      ← Descripción de la empresa y su entorno corporativo
-│   └── alcance_y_objetivos.md          ← Delimitación del proyecto
+├── 📁 Ficha de Caracterización del Cliente/
+│       └── 📄 Ficha de Caracterización del Cliente.pdf
 │
-├── 📁 02_as-is/
-│   ├── arquitectura_negocio.md         ← Procesos actuales y estructura organizacional
-│   ├── arquitectura_datos.md           ← Estado actual de la gestión de datos
-│   ├── arquitectura_aplicaciones.md    ← Inventario y análisis de herramientas (Dynamics, Azure, etc.)
-│   ├── arquitectura_tecnologia.md      ← Infraestructura, nube y soporte
-│   └── seguridad_y_cumplimiento.md     ← Controles actuales y cumplimiento normativo (Ley 1581)
+├── 📁 Modelado de Proceso del Cliente con BPMN/
+│       └── 📄 Informe.md                         ← Procesos actuales y arquitectura de negocio
+│── 📁 Modelo de Información y Diagrama de Contexto/
+│       ├── 📄 ERD_BRY_Andina.drawio.png          ← Entidad-Relación y flujo de datos
+│       └── 📄 Informe.md                         ← Análisis del estado actual de los datos
+│    
+├── 📁 Análisis de la Arquitectura de Infraestructura/
+│       ├── 📄 Informe.md                         ← Análisis de herramientas y soporte
+│       └── 📄 mapa.md                            ← Diagrama de infraestructura y nube
+│    
+├── 📁 Evaluación de Cumplimiento Normativo/
+│       ├── 📄 checklist.xlsx                     ← Verificación de controles (Ley 1581)
+│       └── 📄 Informe.md                         ← Diagnóstico de cumplimiento actual
 │
-├── 📁 03_analisis_brechas/
-│   ├── gap_analysis.xlsx               ← Matriz de brechas AS-IS vs buenas prácticas
-│   └── resumen_brechas.md              ← Síntesis de los hallazgos críticos
-│
-├── 📁 04_to-be/
-│   ├── arquitectura_objetivo.md        ← Propuesta de arquitectura futura
-│   ├── gobierno_de_datos.md            ← Políticas y lineamientos propuestos
-│   └── seguridad_estructurada.md       ← Modelo de seguridad y gestión de accesos
-│
-├── 📁 05_roadmap/
-│   └── roadmap_transformacion.md       ← Hoja de ruta priorizada de implementación
-│
-└── 📁 06_anexos/
-    ├── entrevistas/                    ← Notas y hallazgos de sesiones con stakeholders
-    └── referencias/                   ← Normativas, frameworks y fuentes consultadas
+└──  📁 Análisis de Seguridad con STRIDE/
+        ├── 📄 StrideBrayAndina.xlsx              ← Matriz de amenazas y brechas
+        └── 📄 Informe.md                         ← Síntesis de hallazgos críticos de seguridad
 ```
-
 ---
 
 ##  Hallazgos Principales
